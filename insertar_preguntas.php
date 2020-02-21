@@ -16,7 +16,7 @@ $fecha_actual= date("Y-m-d") ;
 /*INSERTAMOS EL TÍTULO DE NUESTRA EVALUACIÓN Y LA FECHA ACTUAL A NUESTRA BASE DE DATOS*/
 $sql = "INSERT INTO evaluaciones_titulos(Titulo, Fecha) VALUES ('$titulo' ,'$fecha_actual')" ;
 
-$sql = mysql_query($sql) ;
+$sql = mysqli_query($conexion, $sql) ;
 
 
 
@@ -24,9 +24,9 @@ $sql = mysql_query($sql) ;
 /*CAPTURAMOS LA "ID" DEL TÍTULO DE EVALUACIÓN QUE ACABAMOS DE INSERTAR EN LA BD*/
 $sql= "SELECT id FROM evaluaciones_titulos ORDER BY Fecha" ;
 
-$sql= mysql_query($sql) ;
+$sql= mysqli_query($conexion, $sql) ;
 
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 	
 		$id = $row["id"];
@@ -45,7 +45,7 @@ for($i=1; $i<=$preguntas ; $i++)
 		
 		$sql = "INSERT INTO evaluaciones_preguntas(Preguntas, id_evaluaciones_titulos) VALUES ('$texto', '$id')" ;
 		
-		$sql= mysql_query($sql) ;
+		$sql= mysqli_query($conexion, $sql) ;
  
  
 	}

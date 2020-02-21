@@ -142,9 +142,9 @@
 				/*MEDIANTE ESTE "while" CREO UN "SELECT" PARA QUE IMPRIMA EN UNA LISTA DESPLEGABLE EL LISTADO DE EVALUCIONES DISPONIBLES PARA RENDIR*/
 				$sql= "SELECT Titulo FROM evaluaciones_titulos " ;
 
-				$sql= mysql_query($sql) ;
+				$sql= mysqli_query($conexion, $sql) ;
 					
-					while($row= mysql_fetch_array($sql))
+					while($row= mysqli_fetch_array($sql))
 					{
 						
 					
@@ -185,9 +185,9 @@
 
 					$sql= "SELECT NombreyApellido FROM alumnos WHERE Profesor_id= '{$_SESSION["id"]}'  " ;
 
-					$sql= mysql_query($sql) ;
+					$sql= mysqli_query($conexion, $sql) ;
 						
-						while($row= mysql_fetch_array($sql))
+						while($row= mysqli_fetch_array($sql))
 						{
 							
 						
@@ -239,9 +239,9 @@
 
 				$sql= "SELECT * FROM alumnos WHERE Profesor_id= '{$_SESSION["id"]}'  " ;
 
-				$sql= mysql_query($sql) ;
+				$sql= mysqli_query($conexion, $sql) ;
 					
-					while($row= mysql_fetch_array($sql))
+					while($row= mysqli_fetch_array($sql))
 					{
 						
 					

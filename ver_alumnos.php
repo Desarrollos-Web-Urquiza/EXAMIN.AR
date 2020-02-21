@@ -301,10 +301,10 @@ if(isset($C))
   }
    else
   {
-    ?> <ol class="breadcrumb"> <h1 align="center">
+    ?> <ol> <h3 align="center">
 
 
-   <?php echo "SELECCIONE UN ALUMNO/A" ;?></ol></h1><?php
+   <?php echo "SELECCIONE UN ALUMNO/A" ;?></ol></h3><?php
   }
 ?></h1>
 
@@ -341,7 +341,7 @@ if(isset($C))
 if(isset($_GET["alumno"]))
 {
 
-  echo "Evaluaciones realizadas por este alumno: " ;
+  echo "Evaluaciones realizadas por este alumno/a: " ;
   $consulta = "SELECT *
                     FROM respuestas
                     WHERE id_alumnos = '{$_GET["alumno"]}'

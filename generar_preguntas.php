@@ -111,7 +111,8 @@ $preguntas = $_POST["preguntas"] ;
 
 <html>
 
-	
+	<br>
+	<br>
 	<h1 align= center>INGRESE LAS PREGUNTAS</h1> </align><br>
 
 

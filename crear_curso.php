@@ -32,7 +32,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EXAMIN.AR - CREAR ALUMNO</title>
+    <title>EXAMIN.AR - CREAR CURSO</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

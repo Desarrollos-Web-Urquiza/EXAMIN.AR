@@ -113,7 +113,7 @@
 <section id="form">
 
 
-<form action="insertar_alumno.php"  name="frmAlumno2" method="POST">
+<form action="insertar_edicion.php"  name="frmAlumno2" method="POST">
 
 	
 <!-- TÍITULO-->
@@ -173,8 +173,8 @@ $ID_alumno = $_POST["ID_alumno"] ;
 										;
 										
 										
-		$ADS= mysql_query($consulta, $conexion) ;
-		$BBV=mysql_fetch_array($ADS) ;
+		$ADS= mysqli_query($conexion, $consulta) ;
+		$BBV=mysqli_fetch_array($ADS) ;
 		$id_escuela = $BBV['id'] ;
   
 		
@@ -227,9 +227,9 @@ $ID_alumno = $_POST["ID_alumno"] ;
 		/*MEDIANTE ESTE "while" CREO UN "SELECT" PARA QUE IMPRIMA EN UNA LISTA DESPLEGABLE EL LISTADO DE CURSOS*/
 $sql= "SELECT * FROM cursos WHERE Escuela_id= $id_escuela " ;
 
-$sql= mysql_query($sql) ;
+$sql= mysqli_query($conexion, $sql) ;
 	
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 		
 	

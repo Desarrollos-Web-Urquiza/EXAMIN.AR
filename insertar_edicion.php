@@ -30,8 +30,8 @@ echo $escuela_id ;
 										" ;
 										
 										
-		$ADS= mysql_query($consulta, $conexion) ;
-		$BBV=mysql_fetch_array($ADS) ;
+		$ADS= mysqli_query($conexion, $consulta) ;
+		$BBV=mysqli_fetch_array($ADS) ;
 		$id_curso = $BBV['id'] ;
 		
 		
@@ -50,7 +50,7 @@ $sql = "UPDATE alumnos SET
 				
 
  
-$sql = mysql_query($sql) ;
+$sql = mysqli_query($conexion, $sql) ;
 
 
 

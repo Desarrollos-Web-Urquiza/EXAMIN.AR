@@ -25,14 +25,14 @@ for($i=1; $i<=$cantidad_de_preguntas; $i++)
 		
 		$sql = "INSERT INTO respuestas(Respuesta, id_evaluaciones_preguntas, id_evaluciones_titulos, id_alumnos) VALUES ('$texto', '$id_pregunta',  '$id_titulo', '$id_alumno')" ;
 		
-		$sql= mysql_query($sql) ;
+		$sql= mysqli_query($conexion, $sql) ;
  
 		
 		if($preg == "p1")
 		{
 			/*INSERTAMOS EN "id_evaluciones_titulos1" EL "$id_titulo" COMO CONSTANCIA DE QUE EL ALUMNO RENDIÓ ESE EXAMEN. ESTE DATO SERÁ UTILIZADO EN EL PHP "ver_alumnos.php"*/
 			$ABC = "INSERT INTO respuestas(id_evaluciones_titulos1, id_alumnos) VALUES ('$id_titulo',  '$id_alumno')" ;
-			$ABC= mysql_query($ABC) ;
+			$ABC= mysqli_query($conexion, $ABC) ;
 		}
 
 		

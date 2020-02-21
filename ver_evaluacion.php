@@ -266,20 +266,25 @@
 		for($i=0 ; $i < $g ; $i++)
 		{
 		
-			echo "Consigna " ;
-			echo $nro ;
+			?> <b><?php echo "Consigna "?></b><?php ;
+			?> <b><?php echo $nro?></b><?php ;
+			
 			echo "<br>" ;
 			echo $D[$i] ;
 			
 			echo "<br><br><br><br>" ;
 			
-			echo "Respuesta del alumno:  " ;
+			?> <b><?php echo "Respuesta del alumno/a:   "?></b><?php ;
+
 			echo $E[$i] ;
 			
 			echo "<br><br><br><br>" ;
 		
 		
 		    $nro= $nro + $sumador ;
+
+
+		    ?><hr size="5px" width="100%" align="center" color="#4272d7"/><?php
 		
 		}
 		

@@ -91,9 +91,9 @@
 												;
 											
 
-	$sql= mysql_query($sql) ;
+	$sql= mysqli_query($conexion, $sql) ;
 
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 	
 		$id_alumno = $row["id"];
@@ -114,8 +114,8 @@
 										;
 										
 										
-		$Aa= mysql_query($consulta, $conexion) ;
-		$Bb=mysql_fetch_array($Aa) ;
+		$Aa= mysqli_query($conexion, $consulta) ;
+		$Bb=mysqli_fetch_array($Aa) ;
 		$Cc = $Bb['DNI'] ;
 	
 	?>
@@ -145,9 +145,9 @@
 	
 												WHERE Titulo = '{$titulo}'"  ;
 
-	$sql= mysql_query($sql) ;
+	$sql= mysqli_query($conexion, $sql) ;
 
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 	
 		$id_titulo = $row["id"];
@@ -164,10 +164,10 @@
 	
 												WHERE id_evaluaciones_titulos = '{$id_titulo}'"  ;
 
-	$sql= mysql_query($sql) ;
+	$sql= mysqli_query($conexion, $sql) ;
 	
 	$contadordepreguntas= 0 ;
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 	
 		$preguntaz = $row["Preguntas"];
@@ -195,10 +195,10 @@
 	
 												WHERE id_evaluaciones_titulos = '{$id_titulo}'"  ;
 
-	$sql= mysql_query($sql) ;
+	$sql= mysqli_query($conexion, $sql) ;
 	$array= array() ;
 	$contador=1 ;
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 	
 		$Pregunta = $row["Preguntas"];
@@ -270,9 +270,9 @@
 	
 												WHERE Preguntas = '{$array[$i]}'"  ;
 
-	$sql= mysql_query($sql) ;
+	$sql= mysqli_query($conexion, $sql) ;
 
-		while($row= mysql_fetch_array($sql))
+		while($row= mysqli_fetch_array($sql))
 		{
 	
 			$id_pregunta= $row["id"];

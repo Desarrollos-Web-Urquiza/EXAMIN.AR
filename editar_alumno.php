@@ -138,8 +138,8 @@ $ID_alumno= $_GET["IDalumno"] ;
 										;
 										
 										
-		$A= mysql_query($consulta, $conexion) ;
-		$B=mysql_fetch_array($A) ;
+		$A= mysqli_query($conexion, $consulta ) ;
+		$B=mysqli_fetch_array($A) ;
 		$NombreyApellido = $B['NombreyApellido'] ;
 	
 	
@@ -155,8 +155,8 @@ $ID_alumno= $_GET["IDalumno"] ;
 										;
 										
 										
-		$Aa= mysql_query($consulta, $conexion) ;
-		$Bb=mysql_fetch_array($Aa) ;
+		$Aa= mysqli_query($conexion, $consulta) ;
+		$Bb=mysqli_fetch_array($Aa) ;
 		$DNI = $Bb['DNI'] ;
 	
 
@@ -280,9 +280,9 @@ $ID_alumno= $_GET["IDalumno"] ;
 /*MEDIANTE ESTE "while" CREO UN "SELECT" PARA QUE IMPRIMA EN UNA LISTA DESPLEGABLE CON EL LISTADO DE ESCUELAS*/
 $sql= "SELECT Escuela FROM escuelas " ;
 
-$sql= mysql_query($sql) ;
+$sql= mysqli_query($conexion, $sql) ;
 	
-	while($row= mysql_fetch_array($sql))
+	while($row= mysqli_fetch_array($sql))
 	{
 		
 	
